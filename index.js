@@ -14,7 +14,7 @@ app.use(express.static('static'));
 app.get('/', (req, res) => {
   // res.sendFile(path.resolve('pages/index.html'));
   //res.send(`<html><div>haha</div></html>`);
-  res.send({ name: 'James' });
+  res.send({ name: 'James Test' });
 });
 app.get('/hello', (req, res) => {
   //how to go to :3010/hello?
