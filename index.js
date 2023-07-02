@@ -9,21 +9,6 @@ const app = express();
 const port = 3000;
 const path = require('path');
 
-app.use(express.static('static'));
-
-app.get('/', (req, res) => {
-  // res.sendFile(path.resolve('pages/index.html'));
-  //res.send(`<html><div>haha</div></html>`);
-  res.send({ name: 'James Test' });
-});
-app.get('/hello', (req, res) => {
-  //how to go to :3010/hello?
-  res.send('hello');
-});
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
-
 const uri =
   'mongodb+srv://j:w@clusterj.sobzoi2.mongodb.net/?retryWrites=true&w=majority';
 
@@ -51,6 +36,21 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+app.use(express.static('static'));
+
+app.get('/', (req, res) => {
+  // res.sendFile(path.resolve('pages/index.html'));
+  //res.send(`<html><div>haha</div></html>`);
+  res.send({ name: 'James Test' });
+});
+app.get('/hello', (req, res) => {
+  //how to go to :3010/hello?
+  res.send('hello');
+});
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
 
 // const connection = mysql.createConnection({
 //   host: 'localhost',
