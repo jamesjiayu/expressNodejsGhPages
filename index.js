@@ -4,8 +4,7 @@ const mysql = require('mysql2');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const app = express();
 //const app=express();
-//const port =3000
-//const path=require('path')
+
 const port = 3000;
 const path = require('path');
 
